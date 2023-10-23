@@ -22,3 +22,6 @@ jobs:
       with:
         username: ${{ secrets.dockerhub_username }}
         password: ${{ secrets.dockerhub_passwd }}
+
+    - name: push docker image
+      run: docker push ${{ secrets.dockerhub_username }}/my-private-reop:latest
